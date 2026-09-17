@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Федерация дзюдо Новгородской области — официальный сайт</title>
+<meta name="description" content="Официальная федерация дзюдо Новгородской области: календарь соревнований и аттестаций, протоколы, документы, тренеры и клубы.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="top wrap">
+  <a class="brand" href="index.html">
+    <img src="images/logo.svg" alt="Герб федерации дзюдо Новгородской области">
+    <span>Федерация дзюдо<br>Новгородской области</span>
+  </a>
+  <nav class="nav"><a href="about.html">О федерации</a><a href="events.html">Календарь</a><a href="index.html#clubs">Клубы</a><a href="results.html">Результаты</a><a href="documents.html">Документы</a><a href="contacts.html">Контакты</a></nav>
+  <div class="top-right">
+    <a class="tel" href="tel:+79658073707">+7 965 807-37-07</a>
+    <a class="btn btn-blue" href="index.html#clubs">Где заниматься</a>
+    <a class="tel-sm" href="tel:+79658073707" aria-label="Позвонить">Тел</a>
+    <button class="burger" aria-label="Меню" onclick="document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" onclick="this.classList.remove('open')"><a href="about.html">О федерации</a><a href="events.html">Календарь</a><a href="index.html#clubs">Клубы</a><a href="results.html">Результаты</a><a href="documents.html">Документы</a><a href="contacts.html">Контакты</a></nav>
+<section class="hero wrap">
+  <div class="photo">
+    <img src="images/judo-velikiy-novgorod-3.webp" alt="Схватка на татами">
+    <div class="line"></div>
+  </div>
+  <div class="hero-text">
+    <div class="eyebrow light">Официальная региональная федерация · с 2013 года</div>
+    <h1>Федерация дзюдо Новгородской области</h1>
+    <p>Соревнования, аттестации, подготовка тренеров и судей. Календарь сезона, положения и протоколы — здесь. Тренировки — в клубах федерации.</p>
+    <div class="hero-btns">
+      <a class="btn btn-gold" href="#calendar">Календарь сезона</a>
+      <a class="btn btn-line" href="#clubs">Где заниматься</a>
+    </div>
+  </div>
+</section>
+
+<section id="calendar" class="dark">
+  <div class="inner two">
+    <div>
+      <div class="eyebrow light">01 — Календарь сезона</div>
+      <h2>Соревнования и аттестации 2026</h2>
+      <p class="lead">Календарный план федерации на год. Положения и регламенты — в разделе «Документы» за месяц до старта.</p>
+      <a class="btn btn-line-sm" href="events.html" style="margin-top:32px">Весь календарь</a>
+    </div>
+    <div class="cal"><div class="crow" data-until="2026-03-31"><div class="d">март</div><div><div class="t">Аттестация на КЮ</div><div class="place">Великий Новгород</div></div><div class="lvl">аттестация</div></div><div class="crow" data-until="2026-04-04"><div class="d">2–4<small>апреля</small></div><div><div class="t">Первенство СЗФО по дзюдо среди юношей и девушек до 15 лет</div><div class="place">СШ «Спорт-индустрия»</div></div><div class="lvl">федеральный округ</div></div><div class="crow" data-until="2026-04-12"><div class="d">11–12<small>апреля</small></div><div><div class="t">Региональный турнир «Отечество», «Кубок Александра Невского»</div><div class="place">СШ «Спорт-индустрия»</div></div><div class="lvl">региональный</div></div><div class="crow" data-until="2026-05-23"><div class="d">23<small>мая</small></div><div><div class="t">Межрегиональный турнир «Кубок Акрона»</div><div class="place">ФОК «Акрон»</div></div><div class="lvl">межрегиональный</div></div><div class="crow" data-until="2026-10-24"><div class="d">24<small>октября</small></div><div><div class="t">Первенство Новгородской области по дзюдо среди юношей и девушек</div><div class="place">СШ «Спорт-индустрия»</div></div><div class="lvl">областное</div></div><div class="crow" data-until="2026-11-08"><div class="d">7–8<small>ноября</small></div><div><div class="t">Региональные соревнования «Кубок Новгородского Кремля»</div><div class="place">СШ «Спорт-индустрия»</div></div><div class="lvl">региональный</div></div><div class="crow" data-until="2026-12-31"><div class="d">декабрь</div><div><div class="t">Аттестация на КЮ</div><div class="place">Великий Новгород</div></div><div class="lvl">аттестация</div></div></div>
+  </div>
+</section>
+<script>
+(function(){var t=new Date();t.setHours(0,0,0,0);
+document.querySelectorAll('.crow[data-until]').forEach(function(r){var d=new Date(r.dataset.until+'T23:59:59');if(d<t)r.classList.add('past');});})();
+</script>
+<section id="clubs" class="sec two" style="align-items:start">
+  <div>
+    <div class="eyebrow">02 — Где заниматься</div>
+    <h2>Клубы федерации</h2>
+    <p class="lead">Федерация не проводит тренировки. Занятия ведут клубы, с которыми у федерации договор: выберите клуб и свяжитесь с тренером напрямую.</p>
+  </div>
+  <div class="clubs"><div class="club">
+      <h3>Спортивный клуб «Эверест»</h3>
+      <p>Объединяет тренеров федерации, проводит тренировки по дзюдо и самбо для детей и взрослых.</p>
+      <div class="club-links"><a class="btn btn-blue" href="http://everest53.ru" target="_blank" rel="noopener">Сайт клуба</a><a class="tel" href="tel:+79658073707">+7 965 807-37-07</a></div>
+    </div></div>
+</section>
+<section id="coaches">
+  <div class="coaches-head">
+    <div><div class="eyebrow">03 — Тренеры</div><h2>Тренерский состав</h2></div>
+    <p>Аттестованные тренеры федерации. Тренируют в клубах федерации.</p>
+  </div>
+  <div class="coaches"><div class="coach">
+      <div class="photo"><img src="images/trener-yakovlev-dmitrii-nikolaevich.webp" alt="Яковлев Дмитрий Николаевич"></div>
+      <div class="exp"><b>8</b><span>лет тренерского<br>стажа</span></div>
+      <div><h3>Яковлев</h3><div class="fn">Дмитрий Николаевич</div><div class="rank">КМС по дзюдо и самбо</div></div>
+    </div><div class="coach">
+      <div class="photo"><img src="images/trener-svetlov-igor-vladimirovich.webp" alt="Светлов Игорь Владимирович"></div>
+      <div class="exp"><b>6</b><span>лет тренерского<br>стажа</span></div>
+      <div><h3>Светлов</h3><div class="fn">Игорь Владимирович</div><div class="rank">МС России по самбо и боевому самбо</div></div>
+    </div><div class="coach">
+      <div class="photo"><img src="images/trener-logashova-anna-aleksandrovna.webp" alt="Логашева Анна Александровна"></div>
+      <div class="exp"><b>16</b><span>лет тренерского<br>стажа</span></div>
+      <div><h3>Логашева</h3><div class="fn">Анна Александровна</div><div class="rank">Мастер спорта по дзюдо и самбо</div></div>
+    </div></div>
+</section>
+<section id="results" class="two">
+  <div>
+    <div class="eyebrow">04 — Результаты</div>
+    <h2>Прошедшие турниры</h2>
+    <p class="lead">Официальные протоколы в PDF. Итоги по весовым категориям и командному зачёту.</p>
+  </div>
+  <div class="plist"><a class="prow" href="https://judo53.ru/doc/Отчет Кубок Новгородского Кремля 2023.pdf" target="_blank" rel="noopener"><div class="t">Кубок Новгородского Кремля</div><div class="d">11 ноября 2023</div><div class="pdf">Протокол PDF</div></a><a class="prow" href="https://judo53.ru/doc/Отчет Первенство области 2023 г. юн. и дев. 2010-2011.pdf" target="_blank" rel="noopener"><div class="t">Первенство Новгородской области, 2010–2011 г. р.</div><div class="d">22 октября 2023</div><div class="pdf">Протокол PDF</div></a><a class="prow" href="https://judo53.ru/doc/Отчет Первенство области 2023 г. юн. и дев. 2012-2013.pdf" target="_blank" rel="noopener"><div class="t">Первенство Новгородской области, 2012–2013 г. р.</div><div class="d">22 октября 2023</div><div class="pdf">Протокол PDF</div></a><a class="prow" href="https://judo53.ru/doc/szfo-velikiy-novgorod.pdf" target="_blank" rel="noopener"><div class="t">Чемпионат СЗФО среди мужчин и женщин</div><div class="d">Великий Новгород</div><div class="pdf">Протокол PDF</div></a></div>
+</section>
+
+<section id="about">
+  <div class="two">
+    <div class="eyebrow">05 — О федерации</div>
+    <div>
+      <p>Федерация дзюдо Новгородской области с 2013 года развивает дзюдо в регионе: проводит соревнования и аттестации, готовит тренеров и судей, организует сборы и лагеря для юных дзюдоистов.</p>
+      <div class="links">
+        <a class="link" href="about.html">Подробнее о федерации</a>
+        <a class="link" href="documents.html">Документы и устав</a>
+      </div>
+    </div>
+  </div>
+  <div class="mosaic"><div class="photo"><img src="images/judo-velikiy-novgorod-2.webp" alt="Дзюдо в Великом Новгороде" loading="lazy"></div><div class="photo"><img src="images/judo-velikiy-novgorod-4.webp" alt="Дзюдо в Великом Новгороде" loading="lazy"></div><div class="photo"><img src="images/judo-velikiy-novgorod-5.webp" alt="Дзюдо в Великом Новгороде" loading="lazy"></div><div class="photo"><img src="images/judo-velikiy-novgorod-6.webp" alt="Дзюдо в Великом Новгороде" loading="lazy"></div><div class="photo"><img src="images/judo-velikiy-novgorod-7.webp" alt="Дзюдо в Великом Новгороде" loading="lazy"></div></div>
+</section>
+<section class="partners">
+  <div class="eyebrow">Партнёры и организации</div>
+  <div class="grid"><div class="p"><img src="images/partners-minsporta.png" alt="Министерство спорта Новгородской области" title="Министерство спорта Новгородской области" loading="lazy"></div><div class="p"><img src="images/partners-csp.png" alt="Центр спортивной подготовки" title="Центр спортивной подготовки" loading="lazy"></div><div class="p"><img src="images/partners-nmc.png" alt="Новгородский молодёжный центр" title="Новгородский молодёжный центр" loading="lazy"></div><div class="p"><img src="images/partners-everest.png" alt="Спортивный клуб «Эверест»" title="Спортивный клуб «Эверест»" loading="lazy"></div><div class="p"><img src="images/partners-sambo.svg" alt="Федерация самбо Новгородской области" title="Федерация самбо Новгородской области" loading="lazy"></div><div class="p"><img src="images/partners-plumar.png" alt="«Плюмар»" title="«Плюмар»" loading="lazy"></div></div>
+</section>
+<section id="contacts" class="dark">
+  <div class="inner two">
+    <div>
+      <div class="eyebrow light">06 — Контакты</div>
+      <h2>Связаться с федерацией</h2>
+      <a class="big" href="tel:+79658073707">+7 965 807-37-07</a>
+      <div class="clist">
+        <a href="mailto:edinobori_vn@mail.ru">edinobori_vn@mail.ru</a>
+        <a href="https://vk.me/public176636064" target="_blank" rel="noopener">Написать в группу ВКонтакте</a>
+        <div>173009, Великий Новгород,<br>ул. Волотовская, д. 7, к. 1</div>
+      </div>
+    </div>
+    <div class="map">
+      <iframe title="Карта: Великий Новгород, ул. Волотовская, 7, к. 1" src="https://yandex.ru/map-widget/v1/?text=Великий%20Новгород%2C%20Волотовская%20улица%2C%207к1&z=16" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+<footer>
+  <div>© 2026 Федерация дзюдо Новгородской области · judo53.ru</div>
+  <div class="fl"><a href="documents.html">Документы</a><a href="contacts.html">Контакты</a><a href="https://vk.com/public176636064">ВКонтакте</a></div>
+</footer>
+</body>
+</html>

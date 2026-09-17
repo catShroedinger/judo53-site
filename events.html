@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>События и календарь — Федерация дзюдо Новгородской области</title>
+<meta name="description" content="Календарь соревнований по дзюдо в Новгородской области и прошедшие турниры федерации.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="top wrap">
+  <a class="brand" href="index.html">
+    <img src="images/logo.svg" alt="Герб федерации дзюдо Новгородской области">
+    <span>Федерация дзюдо<br>Новгородской области</span>
+  </a>
+  <nav class="nav"><a href="about.html">О федерации</a><a href="events.html" class="active">Календарь</a><a href="index.html#clubs">Клубы</a><a href="results.html">Результаты</a><a href="documents.html">Документы</a><a href="contacts.html">Контакты</a></nav>
+  <div class="top-right">
+    <a class="tel" href="tel:+79658073707">+7 965 807-37-07</a>
+    <a class="btn btn-blue" href="index.html#clubs">Где заниматься</a>
+    <a class="tel-sm" href="tel:+79658073707" aria-label="Позвонить">Тел</a>
+    <button class="burger" aria-label="Меню" onclick="document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" onclick="this.classList.remove('open')"><a href="about.html">О федерации</a><a href="events.html" class="active">Календарь</a><a href="index.html#clubs">Клубы</a><a href="results.html">Результаты</a><a href="documents.html">Документы</a><a href="contacts.html">Контакты</a></nav>
+<section class="phero">
+  <div class="eyebrow light">Раздел 02</div>
+  <h1>События и календарь</h1>
+  <p>Соревнования сезона и прошедшие турниры федерации</p>
+</section>
+<section class="sec">
+  <div class="sec-head">
+    <div><div class="eyebrow">Календарь сезона</div><h2>Соревнования и аттестации 2026</h2></div>
+    <p>Календарный план федерации на 2026 год. План на 2027 год публикуется после утверждения Министерством спорта, ориентировочно в декабре.</p>
+  </div>
+  <div class="cal-lg"><div class="crow" data-until="2026-03-31"><div class="d">март</div><div><div class="t">Аттестация на КЮ</div><div class="place">Великий Новгород</div></div><div class="lvl">аттестация</div></div><div class="crow" data-until="2026-04-04"><div class="d">2–4<small>апреля</small></div><div><div class="t">Первенство СЗФО по дзюдо среди юношей и девушек до 15 лет</div><div class="place">СШ «Спорт-индустрия»</div></div><div class="lvl">федеральный округ</div></div><div class="crow" data-until="2026-04-12"><div class="d">11–12<small>апреля</small></div><div><div class="t">Региональный турнир «Отечество», «Кубок Александра Невского»</div><div class="place">СШ «Спорт-индустрия»</div></div><div class="lvl">региональный</div></div><div class="crow" data-until="2026-05-23"><div class="d">23<small>мая</small></div><div><div class="t">Межрегиональный турнир «Кубок Акрона»</div><div class="place">ФОК «Акрон»</div></div><div class="lvl">межрегиональный</div></div><div class="crow" data-until="2026-10-24"><div class="d">24<small>октября</small></div><div><div class="t">Первенство Новгородской области по дзюдо среди юношей и девушек</div><div class="place">СШ «Спорт-индустрия»</div></div><div class="lvl">областное</div></div><div class="crow" data-until="2026-11-08"><div class="d">7–8<small>ноября</small></div><div><div class="t">Региональные соревнования «Кубок Новгородского Кремля»</div><div class="place">СШ «Спорт-индустрия»</div></div><div class="lvl">региональный</div></div><div class="crow" data-until="2026-12-31"><div class="d">декабрь</div><div><div class="t">Аттестация на КЮ</div><div class="place">Великий Новгород</div></div><div class="lvl">аттестация</div></div></div>
+</section>
+<script>
+(function(){var t=new Date();t.setHours(0,0,0,0);
+document.querySelectorAll('.crow[data-until]').forEach(function(r){var d=new Date(r.dataset.until+'T23:59:59');if(d<t)r.classList.add('past');});})();
+</script>
+<section class="sec" style="background:var(--soft);padding-top:96px">
+  <div class="sec-head">
+    <div><div class="eyebrow">Архив</div><h2>Прошедшие турниры</h2></div>
+    <a class="btn btn-blue" href="results.html">Все результаты</a>
+  </div>
+  <div class="cards"><a class="card" href="results.html"><div class="photo"><img src="images/events-pervenstvo-novgorodskoi-oblasti-2024.webp" alt="Первенство Новгородской области среди юношей и девушек" loading="lazy"></div><div class="t">Первенство Новгородской области среди юношей и девушек</div><div class="pdf">Протокол PDF</div></a><a class="card" href="results.html"><div class="photo"><img src="images/kubok-novgorodskogo-kremlia-2024.webp" alt="Кубок Новгородского Кремля" loading="lazy"></div><div class="t">Кубок Новгородского Кремля</div><div class="pdf">Протокол PDF</div></a><a class="card" href="results.html"><div class="photo"><img src="images/events-kubok-akron.webp" alt="Кубок «Акрон»" loading="lazy"></div><div class="t">Кубок «Акрон»</div><div class="pdf">Протокол PDF</div></a><a class="card" href="results.html"><div class="photo"><img src="images/events-pervenstvo-szfo.webp" alt="Чемпионат СЗФО среди мужчин и женщин" loading="lazy"></div><div class="t">Чемпионат СЗФО среди мужчин и женщин</div><div class="pdf">Протокол PDF</div></a><a class="card" href="results.html"><div class="photo"><img src="images/events-otechestvo-kubok-aleksandra-nevskogo.webp" alt="Региональные соревнования «Отечество», «Кубок Александра Невского»" loading="lazy"></div><div class="t">Региональные соревнования «Отечество», «Кубок Александра Невского»</div><div class="pdf">Протокол PDF</div></a><a class="card" href="results.html"><div class="photo"><img src="images/pervenstvo-szfo-cherepovets.webp" alt="Первенство Северо-Западного федерального округа, Череповец" loading="lazy"></div><div class="t">Первенство Северо-Западного федерального округа, Череповец</div><div class="pdf">Протокол PDF</div></a><a class="card" href="results.html"><div class="photo"><img src="images/kubok-novgorodskogo-kremlia.webp" alt="Кубок Новгородского Кремля" loading="lazy"></div><div class="t">Кубок Новгородского Кремля</div><div class="pdf">Протокол PDF</div></a></div>
+</section>
+<section class="cta-strip">
+  <div><h2>Хотите заниматься дзюдо?</h2><div class="sub">Федерация не проводит тренировки — занятия ведут клубы, с которыми у федерации договор.<br>Выберите клуб и свяжитесь с тренером.</div></div>
+  <div class="right"><a class="tel" href="tel:+79658073707">+7 965 807-37-07</a><a class="btn btn-gold" href="index.html#clubs">Клубы федерации</a></div>
+</section>
+<section class="partners">
+  <div class="eyebrow">Партнёры и организации</div>
+  <div class="grid"><div class="p"><img src="images/partners-minsporta.png" alt="Министерство спорта Новгородской области" title="Министерство спорта Новгородской области" loading="lazy"></div><div class="p"><img src="images/partners-csp.png" alt="Центр спортивной подготовки" title="Центр спортивной подготовки" loading="lazy"></div><div class="p"><img src="images/partners-nmc.png" alt="Новгородский молодёжный центр" title="Новгородский молодёжный центр" loading="lazy"></div><div class="p"><img src="images/partners-everest.png" alt="Спортивный клуб «Эверест»" title="Спортивный клуб «Эверест»" loading="lazy"></div><div class="p"><img src="images/partners-sambo.svg" alt="Федерация самбо Новгородской области" title="Федерация самбо Новгородской области" loading="lazy"></div><div class="p"><img src="images/partners-plumar.png" alt="«Плюмар»" title="«Плюмар»" loading="lazy"></div></div>
+</section>
+<footer>
+  <div>© 2026 Федерация дзюдо Новгородской области · judo53.ru</div>
+  <div class="fl"><a href="documents.html">Документы</a><a href="contacts.html">Контакты</a><a href="https://vk.com/public176636064">ВКонтакте</a></div>
+</footer>
+</body>
+</html>
