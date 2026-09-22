@@ -408,3 +408,46 @@ footer a:hover{color:#fff}
 .map-link img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.6) brightness(.55)}
 .map-link span{position:relative;padding:28px;font-size:16px;line-height:1.5}
 .map-link b{display:block;margin-top:6px;font:700 14px/1 Manrope,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+/* ───── архив соревнований ───── */
+.ytabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.ytab{font:700 22px/1 Unbounded,sans-serif;letter-spacing:-.02em;padding:14px 22px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.ytab.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.ytab:hover:not(.on){background:var(--soft)}
+.ypanel{display:none}
+.ypanel.on{display:block}
+.mon{font:600 12px/1 Manrope,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:40px 0 14px;border-bottom:2px solid var(--ink)}
+.arow{display:grid;grid-template-columns:220px 1fr 180px;gap:28px;align-items:start;padding:28px 0;border-bottom:1px solid var(--line)}
+.arow.past{opacity:.6}
+.arow .d{font:700 44px/1 Unbounded,sans-serif;letter-spacing:-.03em;color:var(--blue);white-space:nowrap}
+.arow .d small{font:500 16px/1 Manrope,sans-serif;color:var(--muted);margin-left:10px}
+.arow .t{font:700 22px/1.3 Manrope,sans-serif}
+.arow .place{margin-top:6px;font-size:15px;color:var(--muted)}
+.arow .place em{font-style:normal;color:var(--blue);font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:12px}
+.mats{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.mat{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border:2px solid var(--blue);color:var(--blue);font:700 13px/1 Manrope,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.mat span{font-size:11px;opacity:.7}
+.mat:hover{background:var(--blue);color:#fff}
+.mat.none{border-color:var(--line);color:var(--muted);text-transform:none;letter-spacing:0;font-weight:500}
+.thumb{display:block;aspect-ratio:4/3;overflow:hidden;clip-path:polygon(0 0,100% 0,100% calc(100% - 16px),0 100%)}
+.thumb img{width:100%;height:100%;object-fit:cover;filter:saturate(.85)}
+/* руководство */
+.lead-list{display:grid;gap:12px}
+.lead-card{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.lead-card.head{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:28px 0;flex-direction:column;align-items:flex-start;gap:8px}
+.lead-card .name{font:700 22px/1.25 Manrope,sans-serif}
+.lead-card.head .name{font:700 28px/1.15 Unbounded,sans-serif;letter-spacing:-.02em}
+.lead-card .role{font:600 12px/1 Manrope,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.lead-h{margin-top:24px;font:700 16px/1 Unbounded,sans-serif}
+.btn-out.soon{border-color:var(--line);color:var(--muted);cursor:default}
+@media(max-width:1100px){.arow{grid-template-columns:160px 1fr}.thumb{grid-column:2;max-width:260px}}
+@media(max-width:640px){
+  .ytab{font-size:16px;padding:10px 14px}
+  .mon{padding-top:28px}
+  .arow{grid-template-columns:1fr;gap:10px;padding:20px 0}
+  .arow .d{font-size:30px}.arow .d small{font-size:14px;margin-left:8px}
+  .arow .t{font-size:17px}
+  .thumb{grid-column:1;max-width:100%}
+  .mat{height:36px;padding:0 12px;font-size:12px}
+  .lead-card{flex-direction:column;align-items:flex-start;gap:6px}
+  .lead-card .name{font-size:18px}.lead-card.head .name{font-size:22px}
+}

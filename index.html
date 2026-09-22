@@ -16,7 +16,7 @@
     <img src="images/logo.svg" alt="Герб федерации дзюдо Новгородской области">
     <span>Федерация дзюдо<br>Новгородской области</span>
   </a>
-  <nav class="nav"><a href="about.html">О федерации</a><a href="events.html">Календарь</a><a href="index.html#clubs">Клубы</a><a href="results.html">Результаты</a><a href="documents.html">Документы</a><a href="contacts.html">Контакты</a></nav>
+  <nav class="nav"><a href="about.html">О федерации</a><a href="events.html">Соревнования</a><a href="index.html#clubs">Клубы</a><a href="documents.html">Документы</a><a href="contacts.html">Контакты</a></nav>
   <div class="top-right">
     <a class="tel" href="tel:+79658073707">+7 965 807-37-07</a>
     <a class="btn btn-blue" href="index.html#clubs">Где заниматься</a>
@@ -24,7 +24,7 @@
     <button class="burger" aria-label="Меню" onclick="document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
   </div>
 </header>
-<nav class="mnav" id="mnav" onclick="this.classList.remove('open')"><a href="about.html">О федерации</a><a href="events.html">Календарь</a><a href="index.html#clubs">Клубы</a><a href="results.html">Результаты</a><a href="documents.html">Документы</a><a href="contacts.html">Контакты</a></nav>
+<nav class="mnav" id="mnav" onclick="this.classList.remove('open')"><a href="about.html">О федерации</a><a href="events.html">Соревнования</a><a href="index.html#clubs">Клубы</a><a href="documents.html">Документы</a><a href="contacts.html">Контакты</a></nav>
 <section class="hero wrap">
   <div class="photo">
     <img src="images/judo-velikiy-novgorod-3.webp" alt="Схватка на татами">
@@ -47,14 +47,20 @@
       <div class="eyebrow light">01 — Календарь сезона</div>
       <h2>Соревнования и аттестации 2026</h2>
       <p class="lead">Календарный план федерации на год. Положения и регламенты — в разделе «Документы» за месяц до старта.</p>
-      <a class="btn btn-line-sm" href="events.html" style="margin-top:32px">Весь календарь</a>
+      <a class="btn btn-line-sm" href="events.html" style="margin-top:32px">Все соревнования и архив</a>
     </div>
     <div class="cal"><div class="crow" data-until="2026-03-31"><div class="d">март</div><div><div class="t">Аттестация на КЮ</div><div class="place">Великий Новгород</div></div><div class="lvl">аттестация</div></div><div class="crow" data-until="2026-04-04"><div class="d">2–4<small>апреля</small></div><div><div class="t">Первенство СЗФО по дзюдо среди юношей и девушек до 15 лет</div><div class="place">СШ «Спорт-индустрия»</div></div><div class="lvl">федеральный округ</div></div><div class="crow" data-until="2026-04-12"><div class="d">11–12<small>апреля</small></div><div><div class="t">Региональный турнир «Отечество», «Кубок Александра Невского»</div><div class="place">СШ «Спорт-индустрия»</div></div><div class="lvl">региональный</div></div><div class="crow" data-until="2026-05-23"><div class="d">23<small>мая</small></div><div><div class="t">Межрегиональный турнир «Кубок Акрона»</div><div class="place">ФОК «Акрон»</div></div><div class="lvl">межрегиональный</div></div><div class="crow" data-until="2026-10-24"><div class="d">24<small>октября</small></div><div><div class="t">Первенство Новгородской области по дзюдо среди юношей и девушек</div><div class="place">СШ «Спорт-индустрия»</div></div><div class="lvl">областное</div></div><div class="crow" data-until="2026-11-08"><div class="d">7–8<small>ноября</small></div><div><div class="t">Региональные соревнования «Кубок Новгородского Кремля»</div><div class="place">СШ «Спорт-индустрия»</div></div><div class="lvl">региональный</div></div><div class="crow" data-until="2026-12-31"><div class="d">декабрь</div><div><div class="t">Аттестация на КЮ</div><div class="place">Великий Новгород</div></div><div class="lvl">аттестация</div></div></div>
   </div>
 </section>
 <script>
-(function(){var t=new Date();t.setHours(0,0,0,0);
-document.querySelectorAll('.crow[data-until]').forEach(function(r){var d=new Date(r.dataset.until+'T23:59:59');if(d<t)r.classList.add('past');});})();
+(function(){
+  var t=new Date();t.setHours(0,0,0,0);
+  document.querySelectorAll('[data-until]').forEach(function(r){var d=new Date(r.dataset.until+'T23:59:59');if(d<t)r.classList.add('past');});
+  var tabs=document.querySelectorAll('.ytab'),panels=document.querySelectorAll('.ypanel');
+  function show(y){tabs.forEach(function(b){b.classList.toggle('on',b.dataset.year===y)});panels.forEach(function(p){p.classList.toggle('on',p.dataset.year===y)});}
+  tabs.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.year);history.replaceState(null,'','#'+b.dataset.year)})});
+  var h=location.hash.slice(1); if(h&&document.querySelector('.ypanel[data-year="'+h+'"]'))show(h);
+})();
 </script>
 <section id="clubs" class="sec two" style="align-items:start">
   <div>
@@ -87,22 +93,14 @@ document.querySelectorAll('.crow[data-until]').forEach(function(r){var d=new Dat
       <div><h3>Логашева</h3><div class="fn">Анна Александровна</div><div class="rank">Мастер спорта по дзюдо и самбо</div></div>
     </div></div>
 </section>
-<section id="results" class="two">
-  <div>
-    <div class="eyebrow">04 — Результаты</div>
-    <h2>Прошедшие турниры</h2>
-    <p class="lead">Официальные протоколы в PDF. Итоги по весовым категориям и командному зачёту.</p>
-  </div>
-  <div class="plist"><a class="prow" href="https://judo53.ru/doc/Отчет Кубок Новгородского Кремля 2023.pdf" target="_blank" rel="noopener"><div class="t">Кубок Новгородского Кремля</div><div class="d">11 ноября 2023</div><div class="pdf">Протокол PDF</div></a><a class="prow" href="https://judo53.ru/doc/Отчет Первенство области 2023 г. юн. и дев. 2010-2011.pdf" target="_blank" rel="noopener"><div class="t">Первенство Новгородской области, 2010–2011 г. р.</div><div class="d">22 октября 2023</div><div class="pdf">Протокол PDF</div></a><a class="prow" href="https://judo53.ru/doc/Отчет Первенство области 2023 г. юн. и дев. 2012-2013.pdf" target="_blank" rel="noopener"><div class="t">Первенство Новгородской области, 2012–2013 г. р.</div><div class="d">22 октября 2023</div><div class="pdf">Протокол PDF</div></a><a class="prow" href="https://judo53.ru/doc/szfo-velikiy-novgorod.pdf" target="_blank" rel="noopener"><div class="t">Чемпионат СЗФО среди мужчин и женщин</div><div class="d">Великий Новгород</div><div class="pdf">Протокол PDF</div></a></div>
-</section>
-
 <section id="about">
   <div class="two">
-    <div class="eyebrow">05 — О федерации</div>
+    <div class="eyebrow">04 — О федерации</div>
     <div>
       <p>Федерация дзюдо Новгородской области с 2013 года развивает дзюдо в регионе: проводит соревнования и аттестации, готовит тренеров и судей, организует сборы и лагеря для юных дзюдоистов.</p>
       <div class="links">
         <a class="link" href="about.html">Подробнее о федерации</a>
+        <a class="link" href="about.html#leadership">Руководство</a>
         <a class="link" href="documents.html">Документы и устав</a>
       </div>
     </div>
@@ -116,7 +114,7 @@ document.querySelectorAll('.crow[data-until]').forEach(function(r){var d=new Dat
 <section id="contacts" class="dark">
   <div class="inner two">
     <div>
-      <div class="eyebrow light">06 — Контакты</div>
+      <div class="eyebrow light">05 — Контакты</div>
       <h2>Связаться с федерацией</h2>
       <a class="big" href="tel:+79658073707">+7 965 807-37-07</a>
       <div class="clist">
