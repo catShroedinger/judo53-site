@@ -103,23 +103,29 @@ h3{font-size:24px;line-height:1.15;font-weight:700}
 .clubs{display:grid;gap:24px}
 .club{border-top:2px solid var(--ink);padding-top:24px}
 .club h3{font-size:28px}
-.club p{margin:14px 0 0;font-size:17px;color:var(--text);max-width:560px}
+.club-addr{margin-top:10px;font:600 15px/1.4 Manrope,sans-serif;color:var(--muted)}
+.club p{margin:12px 0 0;font-size:17px;color:var(--text);max-width:560px}
 .club-links{display:flex;align-items:center;gap:28px;margin-top:24px;flex-wrap:wrap}
 .club-links .tel{font:700 22px/1 Unbounded,sans-serif;letter-spacing:-.02em}
+.club-links .link{font:700 15px/1 Manrope,sans-serif;border-bottom:2px solid var(--gold);padding-bottom:3px}
 .doc-row .sub{margin-top:6px;font:500 15px/1.4 Manrope,sans-serif;color:var(--muted)}
 /* тренеры */
 #coaches{padding:104px var(--pad) 96px}
 .coaches-head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:56px;flex-wrap:wrap}
 .coaches-head p{margin:0;max-width:420px;font-size:17px;color:var(--text)}
-.coaches{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.coaches{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.coaches-head p a{color:var(--blue);border-bottom:2px solid var(--gold)}
 .coach .photo{aspect-ratio:3/4;clip-path:polygon(0 0,100% 0,100% calc(100% - 44px),0 100%)}
 .coach .photo img{object-position:center 15%}
+.coach .photo.nophoto{background:var(--soft);display:flex;align-items:center;justify-content:center}
+.coach .photo.nophoto span{font:700 64px/1 Unbounded,sans-serif;color:var(--blue);opacity:.35;letter-spacing:-.04em}
 .coach .exp{display:flex;align-items:baseline;gap:14px;margin-top:20px;padding-bottom:16px;border-bottom:1px solid var(--line)}
-.coach .exp b{font:700 56px/1 Unbounded,sans-serif;letter-spacing:-.03em;color:var(--blue)}
+.coach .exp b{font:700 48px/1 Unbounded,sans-serif;letter-spacing:-.03em;color:var(--blue)}
 .coach .exp span{font:600 13px/1.3 Manrope,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .coach h3{margin-top:18px}
 .coach .fn{font:700 20px/1.2 Manrope,sans-serif;margin-top:4px}
 .coach .rank{margin-top:10px;font-size:16px;color:var(--text)}
+.coach .cclub{margin-top:8px;font:600 14px/1.4 Manrope,sans-serif;color:var(--muted)}
 
 /* результаты */
 #results{background:var(--soft);padding:96px var(--pad)}
