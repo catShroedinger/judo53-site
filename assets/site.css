@@ -204,7 +204,7 @@ footer a:hover{color:#fff}
   .hero .photo{order:10;position:relative;width:auto;height:320px;margin:32px calc(-1*var(--pad)) 0;clip-path:polygon(0 32px,100% 0,100% 100%,0 100%)}
   .hero .photo .line{left:-20px;top:55%}
   .hero-text{padding:36px 0 0;gap:20px}
-  .hero h1{font-size:42px;line-height:1}
+  .hero h1{font-size:min(42px,calc((100vw - 2*var(--pad))/9.8));line-height:1}  /* «Новгородской» целиком помещается в ширину экрана */
   .hero p{font-size:16px}
   .hero-btns{flex-direction:column;gap:10px}
   .hero-nums{gap:28px;padding:36px 0 0}
@@ -365,7 +365,7 @@ footer a:hover{color:#fff}
   .club-links{gap:16px}
   .club-links .btn{width:auto}
   .phero{padding:44px var(--pad) 72px;clip-path:polygon(0 0,100% 0,100% calc(100% - 30px),0 100%)}
-  .phero h1{font-size:36px;line-height:1.02;margin-top:16px}
+  .phero h1{font-size:min(36px,calc((100vw - 2*var(--pad))/10));line-height:1.02;margin-top:16px}
   .phero p{font-size:15px;margin-top:16px}
   .cta-strip{padding:40px 0;gap:20px}
   .cta-strip h2{font-size:24px}
