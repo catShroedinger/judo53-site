@@ -97,6 +97,10 @@ h3{font-size:24px;line-height:1.15;font-weight:700}
 /* календарь: место и прошедшие */
 .crow .place{margin-top:6px;font-size:14px;color:rgba(255,255,255,.55)}
 .crow.past{opacity:.45}
+/* календарь на главной: все события года прошли, следующего ещё нет (как в sambo53) */
+.cal-note{padding:26px 0;border-bottom:1px solid rgba(255,255,255,.3);font:500 16px/1.55 Manrope,sans-serif;color:rgba(255,255,255,.72)}
+.cal-note b{display:block;margin-bottom:8px;font:600 13px/1.4 Manrope,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+.cal-note a{color:#fff;border-bottom:1px solid var(--gold)}
 .cal-lg .crow .place{color:var(--muted)}
 .cal-lg .crow.past{opacity:.5}
 /* клубы */
@@ -238,7 +242,7 @@ footer a:hover{color:#fff}
   #coaches{padding:56px var(--pad) 48px}
   .coaches-head{margin-bottom:28px}
   .coaches{grid-template-columns:1fr;gap:28px}
-  .coach{display:grid;grid-template-columns:132px 1fr;gap:6px 16px;align-items:start}
+  .coach{display:grid;grid-template-columns:min(132px,calc(100vw - 2*var(--pad) - 176px)) 1fr;gap:6px 16px;align-items:start}  /* на 320–347 px фото чуть уже, иначе «лет тренерского стажа» даёт горизонтальную прокрутку */
   .coach .photo{grid-row:1/3}
   .coach .exp,.coach>div:last-child{grid-column:2}
   .coach .photo{clip-path:polygon(0 0,100% 0,100% calc(100% - 16px),0 100%)}

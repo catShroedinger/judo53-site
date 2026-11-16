@@ -50,6 +50,7 @@
 (function(){
   var t=new Date();t.setHours(0,0,0,0);
   document.querySelectorAll('[data-until]').forEach(function(r){var d=new Date(r.dataset.until+'T23:59:59');if(d<t){r.classList.add('past');var n=r.querySelector('[data-past]');if(n)n.textContent=n.dataset.past;}});
+  var c=document.querySelector('.cal');if(c){var all=c.querySelectorAll('.crow');if(all.length&&c.querySelectorAll('.crow.past').length===all.length){var cn=c.querySelector('.cal-note');if(cn)cn.hidden=false;}}
   var tabs=document.querySelectorAll('.ytab'),panels=document.querySelectorAll('.ypanel');
   function show(y){tabs.forEach(function(b){b.classList.toggle('on',b.dataset.year===y)});panels.forEach(function(p){p.classList.toggle('on',p.dataset.year===y)});}
   tabs.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.year);history.replaceState(null,'','#'+b.dataset.year)})});
